@@ -1,0 +1,53 @@
+{
+  "name": "introduction-to-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "jest",
+    "start": "http-server"
+  },
+  "jest": {
+    "testDirectoryName": "test",
+    "testPathDirs": [
+      "./public"
+    ],
+    "testFileExtensions": [
+      "jsx",
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "jsx",
+      "js"
+    ],
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "http-server": "^0.8.5",
+    "webpack": "^1.12.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-jest": "^6.0.1",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "history": "^1.14.0",
+    "jest-cli": "^0.8.1",
+    "jquery": "^2.1.4",
+    "react-addons-test-utils": "^0.14.3",
+    "style-loader": "^0.13.0",
+    "fbjs": "^0.5.1"
+  }
+}
