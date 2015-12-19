@@ -12,9 +12,14 @@ describe('Dashboard', () => {
             <Dashboard/>
         );
 
-        var createBoardBtn = TestUtils.findRenderedDOMComponentWithClass(dashboard, "create-btn");
+		var boardInput = TestUtils.findRenderedDOMComponentWithClass(dashboard, "board-name")
+        boardInput.value = 'My Board';
 
-        expect(createBoardBtn.textContent).toBe('Create Board')
+		var createBoardBtn = TestUtils.findRenderedDOMComponentWithClass(dashboard, 'create-btn');
+		TestUtils.Simulate.click(createBoardBtn);
+
+		var board = TestUtils.findRenderedDOMComponentWithClass(dashboard, "board-title0");
+		expect(board.textContent).toBe('My Board');
 	})
 
 })
