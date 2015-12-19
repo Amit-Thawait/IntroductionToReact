@@ -1,4 +1,6 @@
 import React from 'react';
+import Board from './board.jsx';
+import ReactDOM from 'react-dom';
 
 var Dashboard = React.createClass({
 
@@ -23,7 +25,9 @@ var Dashboard = React.createClass({
 				{
 					this.state.boards.map((board, index) => {
 						var className = "board-title" + index;
-						return <div className={className}>{board.title}</div>
+						//return <div className={className}>{board.title}</div>
+						return <Board name={board.title} />;
+
 					})
 				}
 			</div>
